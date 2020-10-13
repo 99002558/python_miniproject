@@ -93,11 +93,11 @@ class Calculate(Book):
             for row in data:
                 name_list.append(row[0])
                 publisher_list.append((row[4]))
-            for x in publisher_list:
-                if x==publisher:
-                    index_of_pub=x.index(publisher)
-                    val=name_list[index_of_pub]
-                    game_list.append(val)
+            
+            for index,game in enumerate(publisher_list):
+                if game==publisher:
+                    game_list.append(name_list[index])
+                    
             return game_list
 
 
