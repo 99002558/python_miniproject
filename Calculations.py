@@ -84,6 +84,7 @@ class Calculate(Book):
                 if year==x:
                     count+=1
             return count
+<<<<<<< HEAD
     def list_by_publisher(self,publisher):
         data=self.import_data()
         if data:
@@ -100,6 +101,25 @@ class Calculate(Book):
                    
                     res_list.append(name_list[index])
             return res_list
+=======
+    def games_by_publisher(self,publisher):
+        data=self.import_data()
+        if data:
+            name_list=[]
+            publisher_list=[]
+            game_list=[]
+            for row in data:
+                name_list.append(row[0])
+                publisher_list.append((row[4]))
+            for x in publisher_list:
+                if x==publisher:
+                    index_of_pub=x.index(publisher)
+                    val=name_list[index_of_pub]
+                    game_list.append(val)
+            return game_list
+
+
+>>>>>>> 1f1c2093219e8ea7d615f5e6308c4977f63fae65
 
 data_set=Calculate('Video_Games_Sales.csv')
 #print(data_set.sort_titles_in_asc())
@@ -110,4 +130,9 @@ data_set=Calculate('Video_Games_Sales.csv')
 #print(data_set.sort_global_sales_in_desc())
 #print(data_set.max_critic_score())
 #print(data_set.min_critic_score())
+<<<<<<< HEAD
 print(data_set.list_by_publisher("Microsoft Game Studios"))
+=======
+#print(data_set.count_games_by_year("2004"))
+print(data_set.games_by_publisher("Nintendo"))
+>>>>>>> 1f1c2093219e8ea7d615f5e6308c4977f63fae65
