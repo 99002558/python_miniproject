@@ -156,13 +156,6 @@ class Calculate(Game):
                     
             return result_list
 
-    def calculate_total_sales(self,game_name):
-        data=self.import_data()
-        if data:
-            for row in data:
-                if row==game_name:
-                    pass    
-                return float(row[5])+float(row[6])+float(row[7])+float(row[8])+float(row[9])
 
 
 
@@ -182,4 +175,4 @@ data_set=Calculate('Video_Games_Sales.csv')
 #print(data_set.games_by_year("2004"))
 #print(data_set.games_by_genre("Sports"))
 #print(data_set.games_by_Platform("Wii"))
-#print(data_set.calculate_total_sales("Wii Sports Resort"))
+
