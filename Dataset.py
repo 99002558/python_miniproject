@@ -16,9 +16,18 @@ class Book:
             return self.data_list
     def display(self):
         for row in self.data_list:
-            print("Title:",row[0])
-            print("Author:",row[1])
-            print("Pages:",row[2])
-            print("Publisher:",row[3])
-            print("Id:",row[4])
-            print("Price:",row[5])
+            print("Name:",row[0])
+            print("Platform:",row[1])
+            print("Year:",row[2])
+            print("Genre:",row[3])
+            print("Publisher:",row[4])
+            print("NASales:",row[5])
+            print("EUSales:",row[6])
+            print("JPSales:",row[7])
+            print("OtherSales:",row[8])
+            print("GlobalSales:",row[9])
+            print("CriticScores:",row[10])
+            print("CriticCount:",row[11])
+            print("UserScore:",row[12])
+            print("UserCount:",row[13])
+            

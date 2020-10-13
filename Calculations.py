@@ -17,56 +17,56 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[0])
             return sorted(new_list,reverse=True)
-    def sort_pages_in_asc(self):
+    def sort_publisher_in_asc(self):
         data=self.import_data()
         if data:
             new_list=[]
             for row in data:
-                new_list.append(row[2])
+                new_list.append(row[4])
             return sorted(new_list)
-    def sort_pages_in_desc(self):
+    def sort_publisher_in_desc(self):
         data=self.import_data()
         if data:
             new_list=[]
             for row in data:
-                new_list.append(row[2])
+                new_list.append(row[4])
             return sorted(new_list,reverse=True)
-    def sort_price_in_asc(self):
+    def sort_global_sales_in_asc(self):
         data=self.import_data()
         if data:
             new_list=[]
             for row in data:
-                new_list.append(row[5])
+                new_list.append(row[9])
             return sorted(new_list)
-    def sort_price_in_desc(self):
+    def sort_global_sales_in_desc(self):
         data=self.import_data()
         if data:
             new_list=[]
             for row in data:
-                new_list.append(row[5])
+                new_list.append(row[9])
             return sorted(new_list,reverse=True)
-    def max_price(self):
+    def max_critic_score(self):
         data=self.import_data()
         if data:
             new_list=[]
             for row in data:
-                new_list.append(row[5])
+                new_list.append(row[10])
             return max(new_list)
-    def min_price(self):
+    def min_critic_score(self):
         data=self.import_data()
         if data:
             new_list=[]
             for row in data:
-                new_list.append(row[5])
+                new_list.append(row[10])
             return min(new_list)
 
-data_set=Calculate('libraryManagement.csv')
-#print(data_set.sort_titles_in_asc())
-#print(data_set.sort_titles_in_desc())
-#print(data_set.sort_pages_in_asc())
-#print(data_set.sort_pages_in_desc())
-#print(data_set.sort_price_in_asc())
-#print(data_set.sort_price_in_desc())
-#print(data_set.max_price())
-print(data_set.min_price())
-#print(data_set.max_price())
+data_set=Calculate('Video_Games_Sales.csv')
+print(data_set.sort_titles_in_asc())
+print(data_set.sort_titles_in_desc())
+print(data_set.sort_publisher_in_asc())
+print(data_set.sort_publisher_in_desc())
+print(data_set.sort_global_sales_in_asc())
+print(data_set.sort_global_sales_in_desc())
+print(data_set.max_critic_score())
+print(data_set.min_critic_score())
+
