@@ -114,6 +114,21 @@ class Calculate(Book):
                     result_list.append(name_list[index])
                     
             return result_list
+    def games_by_Platform(self,Platform):
+        data=self.import_data()
+        if data:
+            name_list=[]
+            publisher_list=[]
+            result_list=[]
+            for row in data:
+                name_list.append(row[0])
+                publisher_list.append((row[1]))
+            
+            for index,y in enumerate(publisher_list):
+                if y==Platform:
+                    result_list.append(name_list[index])
+                    
+            return result_list
 
 
 
@@ -129,4 +144,5 @@ data_set=Calculate('Video_Games_Sales.csv')
 #print(data_set.min_critic_score())
 #print(data_set.count_games_by_year("2004"))
 #print(data_set.games_by_publisher("Nintendo"))
-print(data_set.games_by_year("2004"))
+#print(data_set.games_by_year("2004"))
+print(data_set.games_by_Platform("Wii"))
