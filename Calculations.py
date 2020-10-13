@@ -3,6 +3,7 @@ import pandas as pd
 class Calculate(Book):
     def __init__(self,my_list):
         super().__init__(my_list)
+
     def sort_titles_in_asc(self):
         data=self.import_data()
         if data:
@@ -10,6 +11,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[0])
             return sorted(new_list)
+
     def sort_titles_in_desc(self):
         data=self.import_data()
         if data:
@@ -17,6 +19,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[0])
             return sorted(new_list,reverse=True)
+
     def sort_publisher_in_asc(self):
         data=self.import_data()
         if data:
@@ -24,6 +27,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[4])
             return sorted(new_list)
+
     def sort_publisher_in_desc(self):
         data=self.import_data()
         if data:
@@ -31,6 +35,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[4])
             return sorted(new_list,reverse=True)
+
     def sort_global_sales_in_asc(self):
         data=self.import_data()
         if data:
@@ -38,6 +43,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[9])
             return sorted(new_list)
+
     def sort_global_sales_in_desc(self):
         data=self.import_data()
         if data:
@@ -45,6 +51,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[9])
             return sorted(new_list,reverse=True)
+
     def max_critic_score(self):
         data=self.import_data()
         if data:
@@ -52,6 +59,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[10])
             return max(new_list)
+            
     def min_critic_score(self):
         data=self.import_data()
         if data:
@@ -59,6 +67,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[10])
             return min(new_list)
+
     def max_user_score(self):
         data=self.import_data()
         if data:
@@ -66,6 +75,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[12])
             return max(new_list)
+
     def min_user_score(self):
         data=self.import_data()
         if data:
@@ -73,6 +83,7 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[12])
             return min(new_list)
+
     def count_games_by_year(self,year):
         data=self.import_data()
         if data:
@@ -84,6 +95,7 @@ class Calculate(Book):
                 if year==x:
                     count+=1
             return count
+
     def games_by_publisher(self,publisher):
         data=self.import_data()
         if data:
@@ -97,6 +109,7 @@ class Calculate(Book):
                 if game==publisher:
                     game_list.append(name_list[index])       
             return game_list
+
     def games_by_genre(self,genre):
         data=self.import_data()
         if data:
@@ -110,6 +123,7 @@ class Calculate(Book):
                 if game==genre:
                     game_list.append(name_list[index])
             return game_list
+
     def games_by_year(self,year):
         data=self.import_data()
         if data:
@@ -125,6 +139,7 @@ class Calculate(Book):
                     result_list.append(name_list[index])
                     
             return result_list
+
     def games_by_Platform(self,Platform):
         data=self.import_data()
         if data:
@@ -141,6 +156,15 @@ class Calculate(Book):
                     
             return result_list
 
+    def calculate_total_sales(self,game_name):
+        data=self.import_data()
+        if data:
+            for row in data:
+                if row==game_name:
+                    pass    
+                return float(row[5])+float(row[6])+float(row[7])+float(row[8])+float(row[9])
+
+
 
 
 
@@ -156,5 +180,6 @@ data_set=Calculate('Video_Games_Sales.csv')
 #print(data_set.count_games_by_year("2004"))
 #print(data_set.games_by_publisher("Nintendo"))
 #print(data_set.games_by_year("2004"))
-print(data_set.games_by_Platform("Wii"))
-print(data_set.games_by_year("2004"))
+#print(data_set.games_by_genre("Sports"))
+#print(data_set.games_by_Platform("Wii"))
+#print(data_set.calculate_total_sales("Wii Sports Resort"))
