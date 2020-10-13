@@ -1,5 +1,5 @@
 import csv
-class Book:
+class Game:
     def __init__(self,my_list):
         self.my_list=my_list    
     def import_data(self):
