@@ -67,5 +67,9 @@ data_set=Calculate('libraryManagement.csv')
 #print(data_set.sort_pages_in_desc())
 #print(data_set.sort_price_in_asc())
 #print(data_set.sort_price_in_desc())
+<<<<<<< HEAD
 #print(data_set.max_price())
 print(data_set.min_price())
+=======
+#print(data_set.max_price())
+>>>>>>> 99a11cf9b19d90197066bcef4f88163c5bab800c
