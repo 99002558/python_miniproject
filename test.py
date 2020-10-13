@@ -25,4 +25,4 @@ class Calculate(Book)(unittest.TestCase):
      def count_games_by_year(self,year):
          self.assertEqual()  
 if __name__ == '__main__':
-    unittest.main()#command line interface to test the script         
+    unittest.main() #command line interface to test the script         
