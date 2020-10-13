@@ -27,8 +27,23 @@ class Calculate(Book):
         for row in data:
             new_list.append(row[2])
         return sorted(new_list,reverse=True)
+    def sort_price_in_asc(self):
+        data=self.import_data()
+        new_list=[]
+        for row in data:
+            new_list.append(row[5])
+        return sorted(new_list)
+    def sort_price_in_desc(self):
+        data=self.import_data()
+        new_list=[]
+        for row in data:
+            new_list.append(row[5])
+        return sorted(new_list,reverse=True)
+
 data_set=Calculate('libraryManagement.csv')
 #print(data_set.sort_titles_in_asc())
 #print(data_set.sort_titles_in_desc())
 #print(data_set.sort_pages_in_asc())
 #print(data_set.sort_pages_in_desc())
+#print(data_set.sort_price_in_asc())
+#print(data_set.sort_price_in_desc())
