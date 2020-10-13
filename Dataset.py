@@ -29,5 +29,5 @@ class Book:
             print("CriticScores:",row[10])
             print("CriticCount:",row[11])
             print("UserScore:",row[12])
-            print("UserCount:",row[13])
+            
             

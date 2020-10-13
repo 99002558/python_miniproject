@@ -59,8 +59,23 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[10])
             return min(new_list)
+    def max_user_score(self):
+        data=self.import_data()
+        if data:
+            new_list=[]
+            for row in data:
+                new_list.append(row[12])
+            return max(new_list)
+    def min_user_score(self):
+        data=self.import_data()
+        if data:
+            new_list=[]
+            for row in data:
+                new_list.append(row[12])
+            return min(new_list)
 
 data_set=Calculate('Video_Games_Sales.csv')
+<<<<<<< HEAD
 print(data_set.sort_titles_in_asc())
 print("**************************************************************************************************************************")
 print(data_set.sort_titles_in_desc())
@@ -77,4 +92,17 @@ print(data_set.max_critic_score())
 print("**************************************************************************************************************************")
 print(data_set.min_critic_score())
 print("**************************************************************************************************************************")
+=======
+#print(data_set.sort_titles_in_asc())
+#print(data_set.sort_titles_in_desc())
+#print(data_set.sort_publisher_in_asc())
+#print(data_set.sort_publisher_in_desc())
+#print(data_set.sort_global_sales_in_asc())
+#print(data_set.sort_global_sales_in_desc())
+#print(data_set.max_critic_score())
+#print(data_set.min_critic_score())
+#print(data_set.max_user_score())
+print(data_set.min_user_score())
+
+>>>>>>> b46e03775628baa6c023086ac7a883a1c40b5d84
 
