@@ -30,4 +30,5 @@ class Calculate(Book):
 data_set=Calculate('libraryManagement.csv')
 #print(data_set.sort_titles_in_asc())
 #print(data_set.sort_titles_in_desc())
-print(data_set.sort_pages_in_asc())
+#print(data_set.sort_pages_in_asc())
+#print(data_set.sort_pages_in_desc())
