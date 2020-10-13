@@ -110,6 +110,22 @@ class Calculate(Book):
                 if game==genre:
                     game_list.append(name_list[index])
             return game_list
+    def games_by_year(self,year):
+        data=self.import_data()
+        if data:
+            name_list=[]
+            publisher_list=[]
+            result_list=[]
+            for row in data:
+                name_list.append(row[0])
+                publisher_list.append((row[2]))
+            
+            for index,y in enumerate(publisher_list):
+                if y==year:
+                    result_list.append(name_list[index])
+                    
+            return result_list
+
 
 
 
@@ -124,4 +140,8 @@ data_set=Calculate('Video_Games_Sales.csv')
 #print(data_set.min_critic_score())
 #print(data_set.count_games_by_year("2004"))
 #print(data_set.games_by_publisher("Nintendo"))
+<<<<<<< HEAD
 print(data_set.games_by_genre("Sports"))
+=======
+print(data_set.games_by_year("2004"))
+>>>>>>> 8819a529e9f1c73c5280153c0b64070d06e07b42
