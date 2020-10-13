@@ -140,8 +140,4 @@ data_set=Calculate('Video_Games_Sales.csv')
 #print(data_set.min_critic_score())
 #print(data_set.count_games_by_year("2004"))
 #print(data_set.games_by_publisher("Nintendo"))
-<<<<<<< HEAD
-print(data_set.games_by_genre("Sports"))
-=======
 print(data_set.games_by_year("2004"))
->>>>>>> 8819a529e9f1c73c5280153c0b64070d06e07b42
