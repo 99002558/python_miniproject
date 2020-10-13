@@ -24,4 +24,5 @@ class Calculate(Book)(unittest.TestCase):
          self.assertEqual()   
      def count_games_by_year(self,year):
          self.assertEqual()  
-         
+if __name__ == '__main__':
+    unittest.main()         
