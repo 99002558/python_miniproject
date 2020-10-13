@@ -156,23 +156,20 @@ class Calculate(Game):
                     
             return result_list
 
-
-
-
-
-
 data_set=Calculate('Video_Games_Sales.csv')
-#print(data_set.sort_titles_in_asc())
-#print(data_set.sort_titles_in_desc())
-#print(data_set.sort_publisher_in_asc())
-#print(data_set.sort_publisher_in_desc())
-#print(data_set.sort_global_sales_in_asc())
-#print(data_set.sort_global_sales_in_desc())
-#print(data_set.max_critic_score())
-#print(data_set.min_critic_score())
-#print(data_set.count_games_by_year("2004"))
-#print(data_set.games_by_publisher("Nintendo"))
-#print(data_set.games_by_year("2004"))
-#print(data_set.games_by_genre("Sports"))
-#print(data_set.games_by_Platform("Wii"))
+print(data_set.import_data())
+print(data_set.display())
+print(data_set.sort_titles_in_asc())
+print(data_set.sort_titles_in_desc())
+print(data_set.sort_publisher_in_asc())
+print(data_set.sort_publisher_in_desc())
+print(data_set.sort_global_sales_in_asc())
+print(data_set.sort_global_sales_in_desc())
+print(data_set.max_critic_score())
+print(data_set.min_critic_score())
+print(data_set.count_games_by_year("2004"))
+print(data_set.games_by_publisher("Nintendo"))
+print(data_set.games_by_year("2004"))
+print(data_set.games_by_genre("Sports"))
+print(data_set.games_by_Platform("Wii"))
 
