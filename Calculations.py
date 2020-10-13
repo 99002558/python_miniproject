@@ -73,22 +73,25 @@ class Calculate(Book):
             for row in data:
                 new_list.append(row[12])
             return min(new_list)
+    def count_games_by_year(self,year):
+        data=self.import_data()
+        if data:
+            new_list=[]
+            for row in data:
+                new_list.append(row[2])
+            count=0
+            for x in new_list:
+                if year==x:
+                    count+=1
+            return count
 
 data_set=Calculate('Video_Games_Sales.csv')
 print(data_set.sort_titles_in_asc())
-print("**************************************************************************************************************************")
 print(data_set.sort_titles_in_desc())
-print("**************************************************************************************************************************")
 print(data_set.sort_publisher_in_asc())
-print("**************************************************************************************************************************")
 print(data_set.sort_publisher_in_desc())
-print("**************************************************************************************************************************")
 print(data_set.sort_global_sales_in_asc())
-print("**************************************************************************************************************************")
 print(data_set.sort_global_sales_in_desc())
-print("**************************************************************************************************************************")
 print(data_set.max_critic_score())
-print("**************************************************************************************************************************")
 print(data_set.min_critic_score())
-print("**************************************************************************************************************************")
-
+print(data_set.count_games_by_year("2004"))
