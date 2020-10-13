@@ -3,7 +3,7 @@ from Dataset import Book
 
 class Calculate(Book)(unittest.TestCase):
      def sort_titles_in_asc(self):
-         self.assertEqual()
+         self.assertEqual() #to check for an expected result
      def sort_titles_in_desc(self): 
          self.assertEqual()  
      def sort_publisher_in_asc(self):
@@ -25,4 +25,4 @@ class Calculate(Book)(unittest.TestCase):
      def count_games_by_year(self,year):
          self.assertEqual()  
 if __name__ == '__main__':
-    unittest.main()         
+    unittest.main()#command line interface to test the script         
