@@ -1,4 +1,4 @@
-from Dataset import Game
+from dataset import Game
 class Calculate(Game):
     def __init__(self,my_list):
         super().__init__(my_list)
