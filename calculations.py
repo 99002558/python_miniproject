@@ -7,7 +7,7 @@ class Calculate(Game):
     This is a constructor which initialized the base class constructor i.e Game
     """
     def __init__(self, my_list):
-        super(Calculate, self).__init__()
+        super(Calculate, self).__init__(my_list)
 
     def sort_titles_in_asc(self):
         """
