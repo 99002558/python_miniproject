@@ -1,5 +1,4 @@
 from Dataset import Book
-import pandas as pd
 class Calculate(Book):
     def __init__(self,my_list):
         super().__init__(my_list)
@@ -61,12 +60,12 @@ class Calculate(Book):
             return min(new_list)
 
 data_set=Calculate('Video_Games_Sales.csv')
-print(data_set.sort_titles_in_asc())
-print(data_set.sort_titles_in_desc())
-print(data_set.sort_publisher_in_asc())
-print(data_set.sort_publisher_in_desc())
-print(data_set.sort_global_sales_in_asc())
-print(data_set.sort_global_sales_in_desc())
-print(data_set.max_critic_score())
-print(data_set.min_critic_score())
+#print(data_set.sort_titles_in_asc())
+#print(data_set.sort_titles_in_desc())
+#print(data_set.sort_publisher_in_asc())
+#print(data_set.sort_publisher_in_desc())
+#print(data_set.sort_global_sales_in_asc())
+#print(data_set.sort_global_sales_in_desc())
+#print(data_set.max_critic_score())
+#print(data_set.min_critic_score())
 
