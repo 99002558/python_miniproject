@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-from Dataset import Book
-class Calculate(Book):
-=======
 from Dataset import Game
 import pandas as pd
 class Calculate(Game):
->>>>>>> c28baee569cb0d6db5fb35980dad110612e525de
     def __init__(self,my_list):
         super().__init__(my_list)
 
@@ -162,16 +157,6 @@ class Calculate(Game):
             return result_list
 
 data_set=Calculate('Video_Games_Sales.csv')
-<<<<<<< HEAD
-#print(data_set.sort_titles_in_asc())
-#print(data_set.sort_titles_in_desc())
-#print(data_set.sort_publisher_in_asc())
-#print(data_set.sort_publisher_in_desc())
-#print(data_set.sort_global_sales_in_asc())
-#print(data_set.sort_global_sales_in_desc())
-#print(data_set.max_critic_score())
-#print(data_set.min_critic_score())
-=======
 print(data_set.import_data())
 print(data_set.display())
 print(data_set.sort_titles_in_asc())
@@ -187,5 +172,4 @@ print(data_set.games_by_publisher("Nintendo"))
 print(data_set.games_by_year("2004"))
 print(data_set.games_by_genre("Sports"))
 print(data_set.games_by_Platform("Wii"))
->>>>>>> c28baee569cb0d6db5fb35980dad110612e525de
 
