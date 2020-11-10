@@ -8,4 +8,5 @@ jobs:
         id: hello
         uses: LakshitF/pylint3-action@master
         with:
-          filename: '/source/'calculations.py'
+          filename: '/source/'calculations.py
+          filename: '/source/'dataset.py
